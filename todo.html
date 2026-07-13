@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="todo.css">
+</head>
+<body>
+    <h1>To do list</h1>
+
+    
+    <section>
+
+        <div class="headCont">
+    
+    <section>
+        <div class="container">
+            <input type="text" class="TaskName" id="TaskName" placeholder="Enter task">
+            <select class="day" id="day" placeholder="enter day">
+                <option value="Monday">Monday</option>
+                <option value="Tuesday">Tuesday</option>
+                <option value="Wednesday">Wednesday</option>
+                <option value="Thursday">Thursday</option>
+                <option value="Friday">Friday</option>
+                <option value="Saturday">Saturday</option>
+                <option value="Sunday">Sunday</option>
+            </select>
+            <select class="selectBox" id="selectBox" title="choose urgency">
+                <option value="low">low</option>
+                <option value="medium">medium</option>
+                <option value="high">high</option>
+                <input type="textarea" class="TextArea" id="notes" placeholder="Enter notes for task">
+            </select>
+            <section>
+                <div class="BtnS">
+                <button class="button" id="addBtn" onclick="addTask()">Add to list</button>
+                 <button class="button" id="clearBtn" onclick="clearBtn()">Clear list</button>
+                 </div>
+            </section>
+        </div>
+
+        
+    </section>
+    
+
+
+<section>
+    <div class="container2">
+       <h2 class="complete">Tasks that need to be complete</h2>
+         <h2 id="count"></h2>
+       <ul class="ul" id="ul"></ul>
+    
+        </div>
+    </div>
+</section>
+
+
+        </div>
+    </section>
+
+    <script src="todo.js"></script>
+</body>
+</html>

@@ -1,0 +1,140 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+body {
+    background: #f5f7f4;
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding: 50px 20px;
+}
+
+.headCont {
+    width: 100%;
+    max-width: 800px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #6d9f2f;
+    font-size: 2.8rem;
+}
+
+.container,
+.container2 {
+    background: white;
+    border-radius: 20px;
+    padding: 25px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    margin-bottom: 25px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 14px;
+    border: 2px solid #dce8d0;
+    border-radius: 14px;
+    font-size: 1rem;
+    transition: 0.3s;
+    background: white;
+}
+
+input:focus,
+select:focus {
+    outline: none;
+    border-color: #8abf45;
+    box-shadow: 0 0 10px rgba(138,191,69,0.25);
+}
+
+.TextArea {
+    min-height: 110px;
+}
+
+.BtnS {
+    display: flex;
+    gap: 15px;
+}
+
+.button {
+    flex: 1;
+    padding: 14px;
+    border: none;
+    border-radius: 14px;
+    background: #86b84a;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.button:hover {
+    background: #729f3d;
+    transform: translateY(-2px);
+}
+
+.button:active {
+    transform: scale(0.97);
+}
+
+.complete {
+    margin-bottom: 15px;
+    color: #6d9f2f;
+}
+
+#count {
+    background: #eef7e4;
+    color: #5d8d28;
+    width: fit-content;
+    padding: 8px 16px;
+    border-radius: 30px;
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+}
+
+.ul {
+    list-style: none;
+}
+
+.ul li {
+    background: #f8fbf4;
+    border-left: 6px solid #8abf45;
+    border-radius: 14px;
+    padding: 15px;
+    margin-bottom: 15px;
+    line-height: 1.5;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+    transition: 0.2s;
+}
+
+.ul li:hover {
+    transform: translateX(5px);
+}
+
+@media (max-width: 600px) {
+    .BtnS {
+        flex-direction: column;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .container,
+    .container2 {
+        padding: 18px;
+    }
+}
