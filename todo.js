@@ -70,3 +70,18 @@ function clearBtn(){
 
  document.getElementById("count").textContent=""
 }
+
+
+function find(){
+
+ 
+   day=document.getElementById("day2").value
+
+    for( key in toDoList){
+if (toDoList[key].todo.length>0 && day=== toDoList[key].day){
+for(let task of toDoList[key].todo){
+  document.getElementById("fClass").innerHTML += task + "<br>"
+}
+    } 
+}
+    }
