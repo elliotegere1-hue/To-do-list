@@ -27,11 +27,12 @@
                 <option value="Sunday">Sunday</option>
             </select>
             <select class="selectBox" id="selectBox" title="choose urgency">
-                <option value="low">low</option>
-                <option value="medium">medium</option>
-                <option value="high">high</option>
-                <input type="textarea" class="TextArea" id="notes" placeholder="Enter notes for task">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+               
             </select>
+             <input type="textarea" class="TextArea" id="notes" placeholder="Enter notes for task">
             <section>
                 <div class="BtnS">
                 <button class="button" id="addBtn" onclick="addTask()">Add to list</button>
@@ -78,7 +79,7 @@
             <section>
                 <div class="BtnS">
                 <button class="button" id="addBtn" onclick="find()">find task</button>
-                
+                 <button class="button" id="organize" onclick="organizeTask()">organize task</button>
                  </div>
             </section>
         </div>

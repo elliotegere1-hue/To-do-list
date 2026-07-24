@@ -22,14 +22,12 @@ function addTask(){
 
     
 
-    let taskString=`Task: ${task} \n
-    priority: ${priority} \n
-    notes: ${notes}`
+     let taskObj = { task: task, priority: priority, notes: notes };
 
 
 for (const key in toDoList) { // the code loops through the keys in the object
   if (toDoList[key].day === day) { // it then says if the to do list keys day in that iteration is the same as day that we decalred above 
-    toDoList[key].todo.push(taskString) // push task string into the current itterations key todolist
+    toDoList[key].todo.push(taskObj) // push task string into the current itterations key todolist
     count++
   }
 }
@@ -46,10 +44,11 @@ for (const key in toDoList) { // the code loops through the keys in the object
 
 for (let i = 0; i < toDoList.length; i++) {
   if (toDoList[i].todo.length > 0) {
-    list.innerHTML += `<li>${toDoList[i].day} - ${toDoList[i].todo}</li>`
+    for (let t of toDoList[i].todo) {
+      list.innerHTML += `<li>${toDoList[i].day} - ${t.task} (priority: ${t.priority})- ${t.notes}</li>`;
+    }
   }
 }
-    
        
     
     
@@ -85,3 +84,27 @@ for(let task of toDoList[key].todo){
     } 
 }
     }
+
+
+function organizeTask(){
+    let list=document.getElementById("ul")
+    list.innerHTML = ""
+
+    for (let i = 0; i < toDoList.length; i++) {
+        let todos = toDoList[i].todo
+
+        for (let x=0; x<todos.length; x++){                    // CHANGED: renamed inner loop var to x
+            for(let j=0; j<todos.length-1-x; j++){
+                if (todos[j].priority > todos[j+1].priority){  // CHANGED: > instead of < (puts 1 on top)
+                    let temp=todos[j]                          // CHANGED: added let
+                    todos[j]=todos[j+1]
+                    todos[j+1]=temp
+                }
+            }
+        }
+
+        for (let t of todos) {
+            list.innerHTML += `<li>${toDoList[i].day} - ${t.task} (priority: ${t.priority}) - ${t.notes}</li>`
+        }
+    }
+}
